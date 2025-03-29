@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages | 4Heros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-users"></i></span>
+                <span class="logo-text">4Heros</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="messages.html" class="nav-link active">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="settings.html" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="messages-container">
+        <div class="messages-header">
+            <h1>Family Messages</h1>
+            <button id="new-message-btn" class="btn btn-primary">
+                <i class="fas fa-plus"></i> New Message
+            </button>
+        </div>
+
+        <div class="messages-list">
+            <div class="message-card">
+                <div class="message-sender">
+                    <img src="https://i.pinimg.com/736x/7b/05/51/7b0551406cd7936252123558aacc9191.jpg" alt="Mother">
+                    <span>Mother</span>
+                </div>
+                <div class="message-content">
+                    <p class="message-preview">Don't forget about family dinner this Sunday at 7pm!</p>
+                    <span class="message-time">Today, 10:30 AM</span>
+                </div>
+            </div>
+
+            <div class="message-card">
+                <div class="message-sender">
+                    <img src="https://i.pinimg.com/736x/21/18/76/2118761bf5d54b5353662d6838e03415.jpg" alt="Father">
+                    <span>Father</span>
+                </div>
+                <div class="message-content">
+                    <p class="message-preview">I'll be home late tonight. There's extra work at the office.</p>
+                    <span class="message-time">Yesterday, 5:45 PM</span>
+                </div>
+            </div>
+
+            <div class="message-card">
+                <div class="message-sender">
+                    <img src="https://i.pinimg.com/474x/d4/99/8d/d4998d63516451d56eef695eb4f06242.jpg" alt="Sister">
+                    <span>Sister</span>
+                </div>
+                <div class="message-content">
+                    <p class="message-preview">Can someone pick me up from university at 4pm?</p>
+                    <span class="message-time">Yesterday, 1:20 PM</span>
+                </div>
+            </div>
+
+            <div class="message-card">
+                <div class="message-sender">
+                    <img src="https://i.pinimg.com/736x/95/ae/f3/95aef33d99435b0d5761143c17e4398b.jpg" alt="Brother">
+                    <span>Brother</span>
+                </div>
+                <div class="message-content">
+                    <p class="message-preview">I won the basketball tournament today!</p>
+                    <span class="message-time">Monday, 3:15 PM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-modal" id="message-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>New Message</h2>
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="recipient">To:</label>
+                        <select id="recipient" required>
+                            <option value="">Select Family Member</option>
+                            <option value="mother">Mother</option>
+                            <option value="father">Father</option>
+                            <option value="sister">Sister</option>
+                            <option value="brother">Brother</option>
+                            <option value="all">All Family Members</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text">Message:</label>
+                        <textarea id="message-text" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-text">&copy; 2025 4Heros Family Website | Created with <i class="fas fa-heart" style="color: var(--primary);"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

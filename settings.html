@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | 4Heros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-users"></i></span>
+                <span class="logo-text">4Heros</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="messages.html" class="nav-link">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="settings.html" class="nav-link active">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-container">
+        <h1>Account Settings</h1>
+        
+        <div class="settings-tabs">
+            <button class="tab-btn active" data-tab="profile">Profile</button>
+            <button class="tab-btn" data-tab="notifications">Notifications</button>
+            <button class="tab-btn" data-tab="security">Security</button>
+        </div>
+
+        <div class="tab-content active" id="profile">
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="profile-pic">Profile Picture</label>
+                    <div class="profile-pic-container">
+                        <img src="https://via.placeholder.com/150" alt="Profile" id="profile-pic-preview">
+                        <input type="file" id="profile-pic" accept="image/*">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" value="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" value="+94 77 000 0000">
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+
+        <div class="tab-content" id="notifications">
+            <h3>Notification Preferences</h3>
+            <form id="notifications-form">
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="message-notifications" checked>
+                    <label for="message-notifications">New Messages</label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="event-notifications" checked>
+                    <label for="event-notifications">Family Events</label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="reminder-notifications">
+                    <label for="reminder-notifications">Reminders</label>
+                </div>
+                <div class="form-group">
+                    <label for="notification-sound">Notification Sound</label>
+                    <select id="notification-sound">
+                        <option value="default">Default</option>
+                        <option value="chime">Chime</option>
+                        <option value="bell">Bell</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Preferences</button>
+            </form>
+        </div>
+
+        <div class="tab-content" id="security">
+            <h3>Security Settings</h3>
+            <form id="security-form">
+                <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm New Password</label>
+                    <input type="password" id="confirm-password">
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="two-factor">
+                    <label for="two-factor">Enable Two-Factor Authentication</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Security</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-text">&copy; 2025 4Heros Family Website | Created with <i class="fas fa-heart" style="color: var(--primary);"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
